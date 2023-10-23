@@ -23,7 +23,6 @@ function addItem() {
     setName("");
     setZone("");
     setTags("");
-    popup = false;
   }
   return (
     <div className="absolute  mx-auto left-0 right-0 top-[200px] p-4 w-[700px]">

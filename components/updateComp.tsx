@@ -28,11 +28,6 @@ export const db = getFirestore(app);
 const testCollection = collection(db, "items");
 
 function updateComp() {
-  // Hide-show  add item
-  const [popup, setPopup] = useState(false);
-  const handleClick = () => {
-    setPopup(!popup);
-  };
   // Pull data from firebase
   const [test, setTest] = useState([]);
   useEffect(() => {
@@ -53,10 +48,7 @@ function updateComp() {
   return (
     <div className="grid sm:grid-cols-2 md:grid md:grid-cols-3 xl:grid-cols-5 px-6   gap-6 xl:gap-4  ">
       <div className="flex flex-col items-center justify-center  sm:max-w-[350px]    border-2 border-black border-solid min-h-[350px] rounded-xl p-4">
-        <button
-          className="bg-gray-200 p-8 rounded-full grid justify-center"
-          onClick={handleClick}
-        >
+        <button className="bg-gray-200 p-8 rounded-full grid justify-center">
           <img src={PlusButton} alt="" />
         </button>
       </div>
@@ -82,7 +74,7 @@ function updateComp() {
           <p className="  ">Tags: {movie.data.tags}</p>
         </div>
       ))}
-      <div>{popup ? <Additem popup={popup} /> : <></>}</div>
+      <Additem />
     </div>
   );
 }
