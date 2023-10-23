@@ -23,9 +23,10 @@ function addItem() {
     setName("");
     setZone("");
     setTags("");
+    popup = false;
   }
   return (
-    <div className="  mx-auto left-0 right-0  p-4 ">
+    <div className="absolute  mx-auto left-0 right-0 top-[200px] p-4 w-[700px]">
       <div className=" m-auto w-full max-w-[550px] min-h-[430px] h-fill bg-blue-400 p-6 space-y-6 ">
         <form className="space-y-6" onSubmit={handleSumbit}>
           <input
