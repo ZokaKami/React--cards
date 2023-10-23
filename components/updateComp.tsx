@@ -5,7 +5,6 @@ import { getFirestore } from "firebase/firestore";
 import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 import { onSnapshot } from "firebase/firestore";
 import PlusButton from "./images/plusButton.png";
-import Additem from "./additem.tsx";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA_ATSxcgk8M__Rypq8RjU92zT4IeSb2q4",
@@ -74,7 +73,6 @@ function updateComp() {
           <p className="  ">Tags: {movie.data.tags}</p>
         </div>
       ))}
-      <Additem />
     </div>
   );
 }
