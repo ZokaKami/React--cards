@@ -60,11 +60,7 @@ function Cards() {
   }
   return (
     <div className="grid sm:grid-cols-2 md:grid md:grid-cols-3 xl:grid-cols-5 px-6   gap-6 xl:gap-4  ">
-      <div className="flex flex-col items-center justify-center  sm:max-w-[350px]    border-2 border-black border-solid min-h-[350px] rounded-xl p-4">
-        <button className="bg-gray-200 p-8 rounded-full grid justify-center">
-          <img src={PlusButton} alt="" />
-        </button>
-      </div>
+     
       {/* Writing data  */}
       {test.map((movie) => (
         <div
